@@ -1,6 +1,6 @@
-I1 = imread('dofpro_chessRGB.jpg');
+I1 = imread('data/dofpro_chessRGB.jpg');
 [height1 width1 d1] = size(I1);
-I2 = imread('dofpro_chessDM.jpg');
+I2 = imread('data/dofpro_chessDM.jpg');
 [height2 width2 d2] = size(I2);
 
 figure;
@@ -25,7 +25,7 @@ I_minus=I1_gray-I_thresh;
 % figure;
 % imshow(I_minus);
 
- h = fspecial('gaussian', [height1 width1], 6.0);
+h = fspecial('gaussian', [height1 width1], 6.0);
 g = imfilter(I_minus, h); 
 % figure;
 % imshow(g);
